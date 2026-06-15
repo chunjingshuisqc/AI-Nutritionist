@@ -1,0 +1,89 @@
+# =========================
+# 环境变量与敏感配置
+# =========================
+.env
+.env.*
+!.env.example
+
+# API密钥、证书、私钥
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials.json
+
+# =========================
+# Python
+# =========================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# uv
+.python-version
+
+# =========================
+# ChromaDB本地向量数据
+# =========================
+knowledge_base/
+backend/knowledge_base/chroma.sqlite3
+chroma.sqlite3
+
+# 如果你的营养知识源码就在 backend/knowledge_base，
+# 不要忽略整个 backend/knowledge_base 目录
+# 只忽略其中的数据库文件和索引目录
+backend/knowledge_base/*.sqlite3
+backend/knowledge_base/*/
+!backend/knowledge_base/__init__.py
+!backend/knowledge_base/init_data.py
+
+# =========================
+# Node / Vue / Vite
+# =========================
+frontend/node_modules/
+node_modules/
+frontend/dist/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# 操作系统文件
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# 日志和临时文件
+# =========================
+*.log
+logs/
+tmp/
+temp/
+
+# =========================
+# 本地数据库与缓存
+# =========================
+*.db
+*.sqlite
+*.sqlite3
