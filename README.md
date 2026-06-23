@@ -158,9 +158,6 @@ APP_NAME=AI营养师Agent
 APP_VERSION=1.0.0
 DEBUG=true
 
-# true 表示使用模拟大模型和模拟向量
-MOCK_MODE=true
-
 DATABASE_URL=mysql+pymysql://username:password@localhost:3306/ai_nutritionist?charset=utf8mb4
 
 LLM_API_KEY=your-api-key
@@ -174,8 +171,6 @@ EMBEDDING_MODEL=your-embedding-model-name
 CHROMA_PERSIST_DIR=./data/chroma
 CHROMA_COLLECTION_NAME=nutrition_knowledge
 ```
-
-请勿将真实 `.env`、API Key 或数据库密码提交到 GitHub。
 
 ## 数据库初始化
 
@@ -324,18 +319,6 @@ rag_engine.py
 * 大模型 API Key
 * Embedding API Key
 * 模型接口地址
-
-`.gitignore` 中应包含：
-
-```gitignore
-.env
-.venv/
-frontend/node_modules/
-frontend/dist/
-data/
-*.sqlite3
-__pycache__/
-```
 
 
 ## 项目说明
